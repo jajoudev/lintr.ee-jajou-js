@@ -2,10 +2,9 @@ const body = document.querySelector('body')
 
 // Sélectionne et créer les tags principaux du site
 const html = document.querySelector("html");
-html.classList.add("overflow-hidden"); //overflow-hidden
 
 const head = document.querySelector("head");
-body.classList.add("overflow-hidden", "bg-black"); //overflow-hidden // background-color: noir
+body.classList.add("bg-black"); //overflow-hidden // background-color: noir
 
 const main = document.createElement("main");
 const title = document.createElement("title");
@@ -134,7 +133,7 @@ socialsLink(
   "Discord"
 );
 
-socialsLink(profileCard, "", "link-profile-speedrun", "Speedrun");
+socialsLink(profileCard, "#", "link-profile-speedrun", "Speedrun");
 
 const linkProfileTwitch = document.querySelector(".link-profile-twitch");
 
@@ -143,3 +142,9 @@ textTwitch.textContent = "bientôt actif là-bas";
 textTwitch.classList.add("text-xs", "font-normal");
 
 linkProfileTwitch.appendChild(textTwitch);
+
+const copyright = document.createElement('p')
+copyright.textContent = "Ⓒ copyright | jajoudev 2024"
+copyright.classList.add('copyright', "text-xs")
+
+profileCard.appendChild(copyright)
